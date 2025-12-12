@@ -60,5 +60,3 @@
    Подробнее о всех доступных параметрах API читайте в [документации API](/en/api-reference/endpoint/transcription).
 
 ---
-
-> To find navigation and other pages in this documentation, fetch the llms.txt file at: https://docs.nexara.ru/llms.txt
