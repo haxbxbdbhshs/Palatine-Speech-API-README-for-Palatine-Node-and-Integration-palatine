@@ -1,73 +1,79 @@
+---
+
 # n8n-nodes-palatine-transcriber
 
-> **Status**: Stable ✅  
-> Built for seamless integration of **Palatine Speech API** into your n8n workflows.
+> **Статус**: Стабильный ✅
+> Разработано для бесшовной интеграции **Palatine Speech API** в рабочие процессы n8n.
 
-Palatine provides state-of-the-art speech-to-text (STT) services with support for multiple models, including fast and accurate `palatine_small` and high-precision `palatine_large_turbo`. Transcribe audio files (MP3, WAV, OGG, etc.) directly in n8n — no manual HTTP requests needed.
+Palatine предоставляет современный сервис распознавания речи (Speech-to-Text, STT) с поддержкой нескольких моделей, включая быструю и точную `palatine_small`, а также высокоточный `palatine_large_turbo`. Нода позволяет транскрибировать аудиофайлы (MP3, WAV, OGG и др.) напрямую в n8n — без необходимости вручную настраивать HTTP-запросы.
 
-**n8n** is a powerful, open-source, AI-native workflow automation tool. Connect 400+ services and build complex, production-ready automations — visually or with code.
-
----
-
-## ✨ Features
-
-- **Audio Transcription** — Send any binary audio file (`mp3`, `wav`, `ogg`, etc.) and get high-quality text output.
-- **Model Selection** — Choose between fast (`palatine_small`) and high-accuracy (`palatine_large_turbo`) models.
-- **Multiple Output Formats** — Get results as plain `text`, structured `JSON`, or subtitles (`SRT`, `VTT`).
-- **Native Binary Support** — Works directly with n8n binary data (e.g., from *Read Binary Files*, *Telegram*, *HTTP Request*).
-- **Error Resilience** — Supports *Continue on Fail* for robust workflows.
+**n8n** — это мощный open-source инструмент автоматизации рабочих процессов с AI-ориентацией. Он позволяет подключать более 400 сервисов и создавать сложные, production-ready автоматизации — как визуально, так и с использованием кода.
 
 ---
 
-## 📦 Installation
+## ✨ Возможности
 
-1. In your n8n instance, go to **Settings → Community Nodes → Install new**  
-2. Enter:  n8n-nodes-palatine-transcriber
-3. Click **Install**
-
-> ⚠️ Make sure `N8N_COMMUNITY_NODES_ENABLED=true` is set.
-
----
-
-## 🔑 Credentials
-
-1. Go to **Credentials → + Create**  
-2. Search for **Palatine Transcriber API**  
-3. Fill in:
-- **API Key** — your secret token from [api.palatine.ru](https://api.palatine.ru)
-- **Base URL** — usually `https://api.palatine.ru` (default)
-
-> 💡 You can find your API key in your Palatine dashboard.
+* **Транскрибация аудио** — отправляйте любой бинарный аудиофайл (`mp3`, `wav`, `ogg` и др.) и получайте качественный текстовый результат.
+* **Выбор модели** — используйте быструю модель (`palatine_small`) или модель с повышенной точностью (`palatine_large_turbo`).
+* **Несколько форматов вывода** — результаты доступны в виде обычного `text`, структурированного `JSON` или субтитров (`SRT`, `VTT`).
+* **Нативная поддержка бинарных данных** — нода напрямую работает с бинарными данными n8n (например, из *Read Binary Files*, *Telegram*, *HTTP Request*).
+* **Устойчивость к ошибкам** — поддержка режима *Continue on Fail* для надёжных рабочих процессов.
 
 ---
 
-## 🧪 Example Workflow
+## 📦 Установка
 
-1. `Read Binary Files` → select `.mp3`  
-2. `Palatine Transcriber`  
-- Binary Property: `data`  
-- Model: `palatine_large_turbo`  
-- Response Format: `json`  
-3. `Set` → extract `{{ $json.transcription }}`  
-4. `Telegram` → send result to chat 🎉
+1. В вашем экземпляре n8n перейдите в **Settings → Community Nodes → Install new**
+2. Введите: `n8n-nodes-palatine-transcriber`
+3. Нажмите **Install**
+
+> ⚠️ Убедитесь, что переменная окружения `N8N_COMMUNITY_NODES_ENABLED=true` установлена.
 
 ---
 
-## 🛠 Compatibility
+## 🔑 Учётные данные (Credentials)
 
-- **n8n ≥ 1.39.1** (tested up to **1.119.1**)
-- Node.js 18+ (recommended: 20–24)
+1. Перейдите в **Credentials → + Create**
+2. Найдите **Palatine Transcriber API**
+3. Заполните поля:
 
----
+   * **API Key** — ваш секретный токен из панели Palatine
+   * **Base URL** — обычно `https://api.palatine.ru` (значение по умолчанию)
 
-## 📚 Resources
-
-- [Palatine API Documentation](https://api.palatine.ru/docs)
-- [n8n Community Nodes Guide](https://docs.n8n.io/integrations/community-nodes/)
-- [Official n8n GitHub](https://github.com/n8n-io/n8n)
+> 💡 API-ключ можно найти в вашем Palatine Dashboard.
 
 ---
 
-## 🏷️ Keywords
+## 🧪 Пример рабочего процесса
+
+1. `Read Binary Files` → выбрать файл `.mp3`
+2. `Palatine Transcriber`
+
+   * Binary Property: `data`
+   * Model: `palatine_large_turbo`
+   * Response Format: `json`
+3. `Set` → извлечь `{{ $json.transcription }}`
+4. `Telegram` → отправить результат в чат 🎉
+
+---
+
+## 🛠 Совместимость
+
+* **n8n ≥ 1.39.1** (протестировано до версии **1.119.1**)
+* Node.js 18+ (рекомендуется: 20–24)
+
+---
+
+## 📚 Полезные ресурсы
+
+* [Документация Palatine API](https://api.palatine.ru/docs)
+* [Руководство по Community Nodes в n8n](https://docs.n8n.io/integrations/community-nodes/)
+* [Официальный GitHub n8n](https://github.com/n8n-io/n8n)
+
+---
+
+## 🏷️ Ключевые слова
+
 
 `n8n-community-node-package`, `n8n`, `palatine`, `speech-to-text`, `transcription`, `stt`, `audio`, `ai`, `automation`, `russian-asr`, `whisper-alternative`
+---
