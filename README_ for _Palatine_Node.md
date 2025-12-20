@@ -2,8 +2,8 @@
 
 # n8n-nodes-palatine-transcriber
 
-> **Статус**: Стабильный ✅
-> Разработано для бесшовной интеграции **Palatine Speech API** в рабочие процессы n8n.
+**Статус**: Стабильный ✅
+Разработано для бесшовной интеграции **Palatine Speech API** в рабочие процессы n8n.
 
 Palatine предоставляет современный сервис распознавания речи (Speech-to-Text, STT) с поддержкой нескольких моделей, включая быструю и точную `palatine_small`, а также высокоточный `palatine_large_turbo`. Нода позволяет транскрибировать аудиофайлы (MP3, WAV, OGG и др.) напрямую в n8n — без необходимости вручную настраивать HTTP-запросы.
 
@@ -77,3 +77,4 @@ Palatine предоставляет современный сервис расп
 
 `n8n-community-node-package`, `n8n`, `palatine`, `speech-to-text`, `transcription`, `stt`, `audio`, `ai`, `automation`, `russian-asr`, `whisper-alternative`
 ---
+
