@@ -1,5 +1,3 @@
----
-
 ## n8n-nodes-palatine-transcriber
 
 **Статус**: Стабильный  
@@ -76,6 +74,7 @@ Palatine предоставляет современный сервис расп
 
 `n8n-community-node-package`, `n8n`, `palatine`, `speech-to-text`, `transcription`, `stt`, `audio`, `ai`, `automation`, `russian-asr`, `whisper-alternative`
 ---
+
 
 
 
