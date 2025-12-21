@@ -1,4 +1,3 @@
----
 # n8n-nodes-palatine-transcriber
 
 
@@ -105,6 +104,7 @@ Palatine предоставляет сервис распознавания ре
 
 `n8n-community-node-package`, `n8n`, `palatine`, `speech-to-text`, `transcribation`, `stt`, `audio`, `ai`, `automation`
 ---
+
 
 
 
