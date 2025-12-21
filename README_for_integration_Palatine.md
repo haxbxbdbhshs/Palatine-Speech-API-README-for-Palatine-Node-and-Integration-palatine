@@ -7,7 +7,7 @@
 1. **Добавьте узел HTTP Request:**  
    Найдите и добавьте узел **HTTP Request** в ваш рабочий процесс n8n.
 
-   ![Search for HTTP Request Node](https://mintlify.s3.us-west-1.amazonaws.com/nexara/images/n8n.jpg)
+   ![Search for HTTP Request Node](https://drive.google.com/file/d/1umXBo1QXFSrtXkulIr0tnEZUnIWWGhjr/view?usp=sharing)
 
 2. **Импортируйте команду cURL:**  
    Нажмите на опцию **"Import cURL"** в настройках узла HTTP Request. Вставьте следующую команду, **не забудьте заменить `YOUR_PALATINE_API_KEY` на ваш реальный API-ключ Palatine**:
@@ -60,3 +60,4 @@
    Подробнее о всех доступных параметрах API читайте в [документации API](/en/api-reference/endpoint/transcription).
 
 ---
+
