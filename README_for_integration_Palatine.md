@@ -32,7 +32,7 @@
    * **Input Data Field Name**: `data`  
      *(Предполагается, что предыдущий узел — например, **Read Binary File** — передаёт файл в поле `data`. Измените, если у вас другое имя поля.)*
 
-   ![Configure Body Parameters for File](https://mintlify.s3.us-west-1.amazonaws.com/nexara/images/binary.jpg)
+   ![Configure Body Parameters for File](https://github.com/haxbxbdbhshs/photo-for-doc/blob/main/ex_for_file.jpg)
 
    ### ✅ Параметр `model` (модель распознавания)
    * Нажмите **"Add Parameter"** ещё раз  
@@ -44,7 +44,7 @@
      *(Рекомендуем: `palatine_small` для большинства задач)*
 
    Пример заполнения:  
-   ![Model selection example](https://mintlify.s3.us-west-1.amazonaws.com/nexara/images/other.jpg)
+   ![Model selection example](https://github.com/haxbxbdbhshs/photo-for-doc/blob/main/ex_for_model.jpg)
 
 4. **Готово! (Можно добавить дополнительные параметры):**  
    Базовая настройка завершена — узел теперь отправляет файл на транскрипцию с указанной моделью.
@@ -60,6 +60,7 @@
    Подробнее о всех доступных параметрах API читайте в [документации API](/en/api-reference/endpoint/transcription).
 
 ---
+
 
 
 
