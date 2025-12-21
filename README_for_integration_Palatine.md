@@ -7,7 +7,7 @@
 1. **Добавьте узел HTTP Request:**  
    Найдите и добавьте узел **HTTP Request** в ваш рабочий процесс n8n.
 
-   ![Search for HTTP Request Node](https://drive.google.com/file/d/1umXBo1QXFSrtXkulIr0tnEZUnIWWGhjr/view?usp=sharing)
+   ![Search for HTTP Request Node](https://github.com/haxbxbdbhshs/photo-for-doc/main/n8n.jpg)
 
 2. **Импортируйте команду cURL:**  
    Нажмите на опцию **"Import cURL"** в настройках узла HTTP Request. Вставьте следующую команду, **не забудьте заменить `YOUR_PALATINE_API_KEY` на ваш реальный API-ключ Palatine**:
@@ -60,4 +60,5 @@
    Подробнее о всех доступных параметрах API читайте в [документации API](/en/api-reference/endpoint/transcription).
 
 ---
+
 
