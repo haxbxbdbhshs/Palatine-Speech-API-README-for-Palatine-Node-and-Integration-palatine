@@ -1,0 +1,27 @@
+{
+  "name": "n8n-nodes-palatine-transcriber",
+  "version": "0.1.0",
+  "description": "Community node for Palatine Speech API transcription",
+  "keywords": ["n8n", "n8n-community-node-package", "transcription", "palatine"],
+  "main": "dist/nodes/PalatineTranscriber/PalatineTranscriber.node.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "form-data": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^20.16.7",
+    "n8n-workflow": "^1.70.0",
+    "n8n-core": "^1.70.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "^1.70.0",
+    "n8n-core": "^1.70.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
