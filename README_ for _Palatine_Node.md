@@ -215,7 +215,7 @@ Palatine предоставляет сервис распознавания ре
 3. `Set` → извлечь `{{ $json.transcription }}`
 4. `Telegram` → отправить результат в чат 🎉
 
-[workflow example](https://github.com/haxbxbdbhshs/Palatine-Speech-Node-n8n/blob/main/example_workflow.jpg)
+![workflow example](https://github.com/haxbxbdbhshs/Palatine-Speech-Node-n8n/blob/main/example_workflow.jpg)
 ---
 
 
@@ -247,6 +247,7 @@ Palatine предоставляет сервис распознавания ре
 
 `n8n-community-node-package`, `n8n`, `palatine`, `speech-to-text`, `transcribation`, `stt`, `audio`, `ai`, `automation`
 ---
+
 
 
 
