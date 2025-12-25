@@ -5,7 +5,6 @@
 
 
 Нода позволяет транскрибировать аудиофайлы (MP3, WAV, OGG и др.) напрямую в n8n — без необходимости вручную настраивать HTTP-запросы.
-[Полный список поддерживаемых файлов доступе по ссылке](
 
 
 Palatine предоставляет сервис распознавания речи (Speech-to-Text, STT) с поддержкой нескольких моделей:
@@ -233,7 +232,7 @@ Palatine предоставляет сервис распознавания ре
 ## 📚 Полезные ресурсы
 
 
-* [Документация Palatine API]([https://speech.palatine.ru/](https://docs.speech.palatine.ru/documentation/quick_start/transcription))
+* [Документация Palatine API](https://docs.speech.palatine.ru/documentation/quick_start/transcription)
 * [Руководство по Community Nodes в n8n](https://docs.n8n.io/integrations/community-nodes/)
 * [Официальный GitHub n8n](https://github.com/n8n-io/n8n)
 
@@ -247,6 +246,7 @@ Palatine предоставляет сервис распознавания ре
 
 
 `n8n-community-node-package`, `n8n`, `palatine`, `speech-to-text`, `transcribation`, `stt`, `audio`, `ai`, `automation`
+
 
 
 
