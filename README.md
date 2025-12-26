@@ -1,37 +1,35 @@
 # n8n-nodes-palatine-speech
 
 
-> Разработано для бесшовной интеграции **Palatine Speech API** в рабочие процессы n8n.
+> Разработано для бесшовной интеграции **Palatine Speech API** в воркфлоу n8n.
 
 
-Нода позволяет транскрибировать аудиофайлы (MP3, WAV, OGG и др.) напрямую в n8n — без необходимости вручную настраивать HTTP-запросы.
+Нода позволяет транскрибировать, проводить диаризацию, анализ тональности суммаризацию аудиофайлов (MP3, WAV, OGG и др.) напрямую в n8n — без необходимости вручную настраивать HTTP-запросы.
 
 
 ---
 
 ##  Поддерживаемые задачи (Tasks)
 
-Подробнее о каждой задаче можно узнать из докумнтации Palatine Speech, кликнув на ее название\
+Подробнее о каждой задаче можно узнать из документации Palatine Speech, кликнув на ее название\
 Нода поддерживает 4 типа задач, выбираемых через параметр **Task**:
 
 ###  [Transcribe — транскрибация речи](https://docs.speech.palatine.ru/documentation/quick_start/transcription)
-Преобразование аудио в текст
-Поддержка моделей:
-   `palatine_small` — быстрая\
-   `palatine_large_turbo` — высокоточная
+
+Функция распознавания речи (Speech-to-Text, STT)
+
 
 ###  [Diarize — диаризация речи](https://docs.speech.palatine.ru/api-reference/diarization/diarization-polling-api/diarize)
 
-Разделение текста по спикерам и по таймкодам, когда они говорят
+Разметка аудио по спикерам и таймкодам
 
 ###  [Sentiment Analysis — анализ тональности](https://docs.speech.palatine.ru/documentation/quick_start/sentiment_analyze#sozdanie-zadachi)
 
-Определение эмоциональной окраски речи \
-Возвращает структурированный JSON с результатами анализа
+Определяет эмоциональную окраску текста в аудио
 
 ###  [Summarize — пересказ аудио](https://docs.speech.palatine.ru/documentation/quick_start/summarization)
 
-Нода поддерживает **пересказ аудиофайлов** через Palatine Speech API.
+Нода предоставляет **саммери аудиофайлов** в различных форматах
 
 ##  Дополнительные параметры Summarize
 
@@ -46,20 +44,27 @@
 Определяет тип Пересказа:
 
 * `meeting_summary` - Автоматический пересказ совещания, интервью или звонка
-* `user_prompt` - Пользователь сам задаёт инструкцию для пересказа или для получения определенной информации из аудиофайла
+* `user_prompt` - Пользователь сам задаёт инструкцию для пересказа или для получения необходимой информации из аудиофайла
 
-##  Асинхронная обработка и polling
+## Выбор модели
 
-Для задач: Diarize, Sentiment,Summarize
+В поле model можно выбрать две модели, через которые будут выполняться задачи:
+  `palatine_small` — быстрая\
+  `palatine_large_highspeed` — высокоточная
+
+
+##  Особенности
+
+Для задач **Diarize, Sentiment, Summarize** осуществляется двухэтапная работа ноды.
 
 Алгоритм работы:
 
-1. Отправляет задачу в Palatine API
+1. Нода отправляет задачу в Palatine API
 2. Получает `task_id`
 3. Выполняет **polling статуса**
 4. Возвращает финальный результат после завершения обработки
 
- Настройки polling:
+Настройки polling:
 Интервал: **2 секунды**\
 Максимум попыток: **150** (≈ 2 минуты)
 
@@ -82,16 +87,16 @@
 1. Перейдите в **Credentials → + Create**
 2. Найдите **Palatine Speech API**
 3. Заполните поля:
-  * **API Key** — ваш секретный токен из личного кабинета Palatine
-  * **Base URL** — обычно `https://api.palatine.ru` (значение по умолчанию)
+  * **API Key** — ваш токен из личного кабинета Palatine
+  * **Base URL** — по умолчанию `https://api.palatine.ru` 
 >  API-ключ можно найти в https://speech.palatine.ru/dashboard.
 
 
-## Пример рабочего процесса
+## Пример воркфлоу
 
 
 1. `Download mp3 file` → С помощью http request 
-2. `Palatine Speech`
+2. `Palatine Speech(Transcription)`
 3. `Set` → извлечь `{{ $json.transcription }}`
 4. `Telegram` → отправить результат в чат
 
@@ -105,9 +110,10 @@ n8n ≥ 1.39.1 + Node.js 18+ (рекомендуется: 20–24)
 ## Полезные ресурсы
 
 
-* [Документация Palatine API](https://docs.speech.palatine.ru/documentation/quick_start/transcription)
+* [Документация Palatine Speech](https://docs.speech.palatine.ru/documentation/quick_start/transcription)
 * [Руководство по Community Nodes в n8n](https://docs.n8n.io/integrations/community-nodes/)
 * [Официальный GitHub n8n](https://github.com/n8n-io/n8n)
 
 ## Ключевые слова
-`n8n-community-node-package`, `n8n`, `palatine`, `speech-to-text`, `transcribation`, `stt`, `audio`, `ai`, `automation`
+`n8n-community-node-package`, `n8n`, `palatine`, `speech-to-text`, `transcribation`, `stt`, `audio`, `ai`, `automation`, `voice-to-text`, `speech-recognition`, `audio-transcription`, `audio2text`, `audio-processing`
+
