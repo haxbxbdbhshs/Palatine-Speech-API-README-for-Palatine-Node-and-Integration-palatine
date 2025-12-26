@@ -1,0 +1,40 @@
+{
+  "name": "n8n-nodes-palatine",
+  "version": "0.1.0",
+  "description": "Custom n8n node for Palatine Speech API: transcription, diarization, sentiment analysis, summarization",
+  "keywords": ["n8n", "custom", "node", "palatine", "asr", "speech"],
+  "license": "MIT",
+  "author": "Denis",
+
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+
+  "scripts": {
+    "build": "tsc && npm run copy:assets",
+    "copy:assets": "node -e \"const fs=require('fs');const path=require('path');const src=path.join('nodes','PalatineNode','logo.svg');const dstDir=path.join('dist','nodes','PalatineNode');const dst=path.join(dstDir,'logo.svg');if(!fs.existsSync(src)){console.error('ERROR: logo.svg not found at',src);process.exit(1);}fs.mkdirSync(dstDir,{recursive:true});fs.copyFileSync(src,dst);console.log('OK: copied',src,'->',dst);\"",
+    "dev": "tsc --watch"
+  },
+
+  "n8n": {
+    "credentials": [
+      "dist/credentials/PalatineNodeApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/PalatineNode/PalatineNode.node.js"
+    ]
+  },
+
+  "dependencies": {
+    "form-data": "^4.0.0"
+  },
+
+  "devDependencies": {
+    "n8n-core": "^1.80.0",
+    "n8n-workflow": "^1.80.0",
+    "typescript": "^5.5.0"
+  },
+
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
