@@ -1,4 +1,4 @@
-# n8n-nodes-palatine-transcriber
+# n8n-nodes-palatine-speech
 
 
 > Разработано для бесшовной интеграции **Palatine Speech API** в рабочие процессы n8n.
