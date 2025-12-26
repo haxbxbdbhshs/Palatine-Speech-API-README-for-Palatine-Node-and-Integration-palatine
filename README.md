@@ -11,24 +11,25 @@
 
 ##  Поддерживаемые задачи (Tasks)
 
+Подробнее о каждой задаче можно узнать из докумнтации Palatine Speech, кликнув на ее название\
 Нода поддерживает 4 типа задач, выбираемых через параметр **Task**:
 
-###  Transcribe — транскрибация речи
+###  [Transcribe — транскрибация речи](https://docs.speech.palatine.ru/documentation/quick_start/transcription)
 Преобразование аудио в текст
 Поддержка моделей:
    `palatine_small` — быстрая\
    `palatine_large_turbo` — высокоточная
 
-###  Diarize — диаризация речи
+###  [Diarize — диаризация речи](https://docs.speech.palatine.ru/api-reference/diarization/diarization-polling-api/diarize)
 
 Разделение текста по спикерам и по таймкодам, когда они говорят
 
-###  Sentiment Analysis — анализ тональности
+###  [Sentiment Analysis — анализ тональности](https://docs.speech.palatine.ru/documentation/quick_start/sentiment_analyze#sozdanie-zadachi)
 
 Определение эмоциональной окраски речи \
 Возвращает структурированный JSON с результатами анализа
 
-###  Summarize — пересказ аудио
+###  [Summarize — пересказ аудио](https://docs.speech.palatine.ru/documentation/quick_start/summarization)
 
 Нода поддерживает **пересказ аудиофайлов** через Palatine Speech API.
 
