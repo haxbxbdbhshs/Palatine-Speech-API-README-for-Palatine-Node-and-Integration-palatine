@@ -3,8 +3,8 @@
 
 > Разработано для бесшовной интеграции **Palatine Speech API** в воркфлоу n8n.
 
-[Полный список поддерживаемых файлов доступе по ссылке](https://docs.speech.palatine.ru/documentation/technical_information/supported_files)
-[Полный список поддерживаемых языков доступе по ссылке](https://docs.speech.palatine.ru/documentation/technical_information/supported_languages)
+[Полный список поддерживаемых файлов доступе по ссылке](https://docs.speech.palatine.ru/documentation/technical_information/supported_files)\
+[Полный список поддерживаемых языков доступе по ссылке](https://docs.speech.palatine.ru/documentation/technical_information/supported_languages)\
 Нода позволяет транскрибировать, проводить диаризацию, анализ тональности суммаризацию аудиофайлов (MP3, WAV, OGG и др.) напрямую в n8n — без необходимости вручную настраивать HTTP-запросы.
 
 
