@@ -97,14 +97,13 @@
 
 ## Пример воркфлоу
 
-
-1. `Download mp3 file` → С помощью http request 
-2. `Palatine Speech(Transcription)`
-3. `Set` → извлечь `{{ $json.transcription }}`
-4. `Telegram` → отправить результат в чат
+1. `Schedule Trigger` → Запуск Wowkflow
+2. `Config` → Задаем основные параметры
+3. `Download mp3 file` → С помощью http request 
+4. `Palatine Speech` → Транскрибация
+5. `Telegram` → отправить результат в чат
 
 ![workflow example](https://github.com/haxbxbdbhshs/Palatine-Speech-Node-n8n/blob/main/example_workflow.jpg)
-
 
 ## Совместимость
 
