@@ -103,7 +103,7 @@
 4. `Palatine Speech` → Транскрибация
 5. `Telegram` → отправить результат в чат
 
-![workflow example](https://github.com/haxbxbdbhshs/Palatine-Speech-Node-n8n/blob/main/example_workflow.jpg)
+![workflow example](https://github.com/haxbxbdbhshs/Palatine-Speech-Node-n8n/blob/main/example_workflow.png)
 
 ## Совместимость
 
